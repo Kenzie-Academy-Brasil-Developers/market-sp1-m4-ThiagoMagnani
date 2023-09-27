@@ -33,6 +33,5 @@ export const editProducts = (req: Request, res: Response) => {
 export const delProduct = (req: Request, res: Response) => {
     const index = market.findIndex(prod => prod.id == req.params.id);
     market.splice(index, 1);
-    console.log(index);
     return res.status(204).json({ message: "Product not found." });
 }
